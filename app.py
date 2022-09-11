@@ -28,10 +28,6 @@ def main_page():
         file.save(os.path.join('uploads', filename))
         return redirect(url_for('prediction', filename=filename))
     return render_template('index.html')
-    
-@app.route('/index')
-def index():
-    return render_template('index.html')
 
 @app.route('/index2', methods=['GET', 'POST']) 
 def index2():
