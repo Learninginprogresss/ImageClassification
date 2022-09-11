@@ -33,9 +33,14 @@ def main_page():
 def index():
     return render_template('index.html')
 
-@app.route('/index2')
+@app.route('/index2', methods=['GET', 'POST']) 
 def index2():
-    return render_template('index2.html')
+    if request.method == 'POST':
+        file = request.files['file']
+        filename = secure_filename(file.filename)
+        file.save(os.path.join('uploads', filename))
+        return redirect(url_for('prediction', filename=filename))
+    return render_template('index.html')
 
 @app.route('/prediction/<filename>') 
 def prediction(filename):
