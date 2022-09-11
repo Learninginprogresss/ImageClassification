@@ -52,7 +52,7 @@ body, html {
     <img src="https://raw.githubusercontent.com/eugoregon/carsfolder/00ee146c7a337a96ba9434b7049b79b48f7af647/mazda/getgo.jpg" alt="A drone">
     <!-- Right-sided navbar links -->
     <div background-color="black" class="w3-right w3-hide-small">
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Upload Image</a>
+      <a href="{{ url_for('main_page') }}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Upload Image</a>
       <a href="https://getgo.sg/" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact GetGo</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -66,7 +66,7 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Upload Image</a>
+  <a href="{{ url_for('main_page') }}" onclick="w3_close()" class="w3-bar-item w3-button">Upload Image</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
 </nav>
 

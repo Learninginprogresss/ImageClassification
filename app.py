@@ -29,6 +29,14 @@ def main_page():
         return redirect(url_for('prediction', filename=filename))
     return render_template('index.html')
 
+@app.route('/index.html')
+def index():
+    return render_template('index.html')
+
+@app.rout('/index2.html')
+def index2():
+    return render_template('index2.html')
+    
 @app.route('/prediction/<filename>') 
 def prediction(filename):
     #Step 1
