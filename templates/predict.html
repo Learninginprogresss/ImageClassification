@@ -42,6 +42,10 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+.table td {
+    text-align: center;
+}
 </style>
 </head>
 <body>
@@ -52,7 +56,8 @@ body, html {
     <img src="https://raw.githubusercontent.com/eugoregon/carsfolder/00ee146c7a337a96ba9434b7049b79b48f7af647/mazda/getgo.jpg" alt="A drone">
     <!-- Right-sided navbar links -->
     <div background-color="black" class="w3-right w3-hide-small">
-      <a href="{{ url_for('main_page') }}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Upload Image</a>
+      <a href="{{ url_for('main_page') }}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Upload Image for A New Booking</a>
+      <a href="{{ url_for('index2') }}" class="w3-bar-item w3-button"><i class="fa fa-th"></i>Upload Image for Ending A Booking</a>
       <a href="https://getgo.sg/" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact GetGo</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -105,7 +110,7 @@ body, html {
   
   <h1 class="text-light mb-5"> Thank you for your submission</h1>
   <p class="text-light"> It appears there is some damage on your car. Contact a GetGo assistant to verify. </p>
-  <table class="table-bordered text-light" style="width:100%">
+  <table class="table-bordered text-light table" style="width:100%">
   <tr>
     <th>Rank</th>
     <th>Class</th>
