@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Autorent for getgo</title>
+<title>Image Verification For Ending Your GetGo Car Booking</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -42,10 +42,6 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
-
-.table td {
-    text-align: center;
-}
 </style>
 </head>
 <body>
@@ -56,8 +52,7 @@ body, html {
     <img src="https://raw.githubusercontent.com/eugoregon/carsfolder/00ee146c7a337a96ba9434b7049b79b48f7af647/mazda/getgo.jpg" alt="A drone">
     <!-- Right-sided navbar links -->
     <div background-color="black" class="w3-right w3-hide-small">
-      <a href="{{ url_for('main_page') }}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Upload Image for A New Booking</a>
-      <a href="{{ url_for('index2') }}" class="w3-bar-item w3-button"><i class="fa fa-th"></i>Upload Image for Ending A Booking</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Upload Image</a>
       <a href="https://getgo.sg/" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact GetGo</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -71,7 +66,7 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
-  <a href="{{ url_for('main_page') }}" onclick="w3_close()" class="w3-bar-item w3-button">Upload Image</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Upload Image</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
 </nav>
 
@@ -108,25 +103,22 @@ body, html {
   <div class="w3-row-padding">
     
   
-  <h1 class="text-light mb-5"> Thank you for your submission</h1>
-  <p class="text-light"> This table displays the status of vehicle number <b>SLP3459W</b> and whether it has any potential damages. 
-    <br>Please contact a GetGo staff for assistance before we can end your booking.</p>
-    <table class="table-bordered text-light table" style="width:100%">
+  <h1 class="text-light mb-5"> Thank you for your image submission</h1>
+  <p class="text-light">This table displays the status of vehicle number <b>SLP3459W</b> and whether it has any potential damages. 
+<br>Please contact a GetGo staff for assistance before we can end your booking.</p>
+  <table class="table-bordered text-light" style="width:60%">
   <tr>
-    <th>Rank</th>
-    <th>Class</th>
-    <th>Probability</th>
+    <th style="width:20%" align="left">Assessment</th>
+    <th style="width:20%" align="left">Status</th>
+    <th style="width:20%" align="left">Probability of Damage</th>
   </tr>
   <tr>
-    <td>Most Likely:</td>
+    <td>Most Likely Status of Vehicle:</td>
     <td>{{ predictions.class1 }}</td>
     <td>{{ predictions.prob1 }}</td>
   </tr>
-  <tr>
-    <td>2nd Most Likely:</td>
-    <td>{{ predictions.class2 }}</td> <td>{{ predictions.prob2 }}</td> </tr> <tr>
-    </tr>
-  </table> <a href="{{ url_for('main_page') }}"><button class="button mt-3">Try again?</button></a>
+
+  </table><p><br><a href="{{ url_for('main_page') }}"><button class="button mt-3">Upload a fresh image</button></a></p>
 
       
       
